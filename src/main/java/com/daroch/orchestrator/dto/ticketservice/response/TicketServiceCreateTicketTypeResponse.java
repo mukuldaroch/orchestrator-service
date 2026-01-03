@@ -1,0 +1,21 @@
+package com.daroch.orchestrator.dto.ticketservice.response;
+
+import com.daroch.orchestrator.dto.common.enums.TicketTypeStatusEnum;
+import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class TicketServiceCreateTicketTypeResponse {
+
+  private UUID ticketTypeId;
+  private UUID eventId;
+  private String name;
+  private Double price;
+  private String description;
+  private Integer totalAvailable;
+  private TicketTypeStatusEnum status;
+}

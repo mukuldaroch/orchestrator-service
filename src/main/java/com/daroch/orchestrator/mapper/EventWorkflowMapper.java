@@ -4,8 +4,8 @@ import com.daroch.orchestrator.dto.api.request.CreateEventRequest;
 import com.daroch.orchestrator.dto.api.response.CreateEventResponse;
 import com.daroch.orchestrator.dto.eventservice.request.EventServiceCreateEventRequest;
 import com.daroch.orchestrator.dto.eventservice.response.EventServiceCreateEventResponse;
-import com.daroch.orchestrator.dto.ticketservice.request.TicketServiceCreateTicketTypeRequest;
-import com.daroch.orchestrator.dto.ticketservice.response.TicketServiceCreateTicketTypeResponse;
+import com.daroch.orchestrator.dto.ticketservice.tickettype.request.TicketServiceCreateTicketTypeRequest;
+import com.daroch.orchestrator.dto.ticketservice.tickettype.response.TicketServiceCreateTicketTypeResponse;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.stereotype.Component;
@@ -42,12 +42,12 @@ public class EventWorkflowMapper {
 
     EventServiceCreateEventRequest req = new EventServiceCreateEventRequest();
     req.setName(apiRequest.getName());
-    req.setStartDate(apiRequest.getStartDate());
-    req.setEndDate(apiRequest.getEndDate());
     req.setVenue(apiRequest.getVenue());
+    req.setStatus(apiRequest.getStatus());
+    req.setEventStartDate(apiRequest.getEventStartDate());
+    req.setEventEndDate(apiRequest.getEventEndDate());
     req.setSalesStartDate(apiRequest.getSalesStartDate());
     req.setSalesEndDate(apiRequest.getSalesEndDate());
-    req.setStatus(apiRequest.getStatus());
 
     return req;
   }
@@ -84,7 +84,7 @@ public class EventWorkflowMapper {
               req.setPrice(ticket.getPrice());
               req.setDescription(ticket.getDescription());
               req.setTotalAvailable(ticket.getTotalAvailable());
-              req.setStatus(ticket.getStatus());
+              req.setTicketTypeStatus(ticket.getTicketTypeStatus());
 
               return req;
             })
@@ -116,8 +116,8 @@ public class EventWorkflowMapper {
     res.setEventId(eventResponse.getEventId());
     res.setName(eventResponse.getName());
     res.setVenue(eventResponse.getVenue());
-    res.setDescription(eventResponse.getDescription());
     res.setStatus(eventResponse.getStatus());
+
     res.setEventStartDate(eventResponse.getEventStartDate());
     res.setEventEndDate(eventResponse.getEventEndDate());
     res.setSalesStartDate(eventResponse.getSalesStartDate());

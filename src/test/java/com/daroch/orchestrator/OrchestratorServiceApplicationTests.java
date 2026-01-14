@@ -1,13 +1,10 @@
 package com.daroch.orchestrator;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+// @SpringBootTest
 class OrchestratorServiceApplicationTests {
-	//
-	// @Test
-	// void contextLoads() {
-	// }
-
+  //
+  // @Test
+  // void contextLoads() {}
 }

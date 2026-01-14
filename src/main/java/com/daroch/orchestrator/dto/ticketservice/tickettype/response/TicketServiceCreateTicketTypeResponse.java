@@ -1,6 +1,7 @@
-package com.daroch.orchestrator.dto.ticketservice.response;
+package com.daroch.orchestrator.dto.ticketservice.tickettype.response;
 
 import com.daroch.orchestrator.dto.common.enums.TicketTypeStatusEnum;
+import java.time.LocalDateTime;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +18,6 @@ public class TicketServiceCreateTicketTypeResponse {
   private Double price;
   private String description;
   private Integer totalAvailable;
-  private TicketTypeStatusEnum status;
+  private TicketTypeStatusEnum ticketTypeStatus;
+  private LocalDateTime createdAt;
 }

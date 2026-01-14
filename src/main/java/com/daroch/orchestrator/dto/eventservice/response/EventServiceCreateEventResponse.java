@@ -17,8 +17,9 @@ public class EventServiceCreateEventResponse {
   private String venue;
   private String description;
   private EventStatusEnum status;
-  private LocalDateTime EventStartDate;
-  private LocalDateTime EventEndDate;
+
+  private LocalDateTime eventStartDate;
+  private LocalDateTime eventEndDate;
   private LocalDateTime salesStartDate;
   private LocalDateTime salesEndDate;
   private LocalDateTime createdAt;

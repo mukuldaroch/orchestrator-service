@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  #
+  application:
+    name: orchestrator-service
+  #
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth.local:8080/realms/event-service
